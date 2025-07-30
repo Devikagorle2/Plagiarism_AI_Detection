@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #1e1e2f;
+  color: white;
+  width: 250px;
+  flex-shrink: 0;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  justify-content: center;
+}
+.sidebar img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.social-icons {
+  margin-top: 1rem;
+}
+.social-icons a {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #00ffd5;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #1e1e2f;
+  padding: 1rem 2rem;
+  z-index: 999;
+  width: calc(100% - 250px);
+  display: flex;
+  justify-content: flex-end;
+}
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.top-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.top-nav ul li a:hover {
+  color: #00ffd5;
+}
+
+.main-content {
+  flex: 1;
+  padding: 6rem 2rem 2rem 2rem;
+  overflow-y: auto;
+}
+section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card p, .card li {
+  padding: 0.25rem 0;
+  line-height: 1.6;
+}
+.hero {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 10px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero span {
+  color: #00ffd5;
+}
+.resume-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #00ffd5;
+  color: #1e1e2f;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.resume-button:hover {
+  background-color: #00c0aa;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+  .main-content {
+    padding: 5rem 1rem 1rem 1rem;
+  }
+  .top-nav {
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+  }
+}
